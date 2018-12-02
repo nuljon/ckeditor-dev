@@ -338,6 +338,10 @@
 					Style.convertStyleToPx( element );
 
 				},
+				'tr': function( element ) {
+					// Attribues are moved to 'td' elements.
+					element.attributes = {};
+				},
 				'td': function( element ) {
 					var ascendant = element.getAscendant( 'table' ),
 						ascendantStyle = tools.parseCssText( ascendant.attributes.style, true );

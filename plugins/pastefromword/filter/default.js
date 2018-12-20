@@ -535,7 +535,7 @@
 				return;
 			}
 
-			if ( value === '' || value == null ) {
+			if ( value === '' ) {
 				delete styles[ key ];
 			} else {
 				styles[ key ] = value;
@@ -546,7 +546,7 @@
 
 		removeStyles: function( element, styles ) {
 			CKEDITOR.tools.array.forEach( styles, function( style ) {
-				Style.setStyle( element, style, null );
+				Style.setStyle( element, style, '' );
 			} );
 		},
 

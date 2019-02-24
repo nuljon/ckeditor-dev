@@ -12,6 +12,9 @@ Fixed Issues:
 
 * [#2672](https://github.com/ckeditor/ckeditor-dev/issues/2672): Fixed: When resizing [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to minimum size with a resizer the image dialog doesn't show actual values.
 * [#1478](https://github.com/ckeditor/ckeditor-dev/issues/1478): Fixed: Custom colors added to [Color Button](https://ckeditor.com/cke4/addon/colorbutton) via [`config.colorButton_colors`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-colorButton_colors) in form label/code don't work correctly.
+* [#2845](https://github.com/ckeditor/ckeditor-dev/issues/2845): [Rich Combo](https://ckeditor.com/cke4/addon/richcombo) reacts to right mouse button click.
+* [#2857](https://github.com/ckeditor/ckeditor-dev/issues/2857): [List Block](https://ckeditor.com/cke4/addon/listblock) items react to right mouse button click.
+* [#2858](https://github.com/ckeditor/ckeditor-dev/issues/2858): [Menu](https://ckeditor.com/cke4/addon/menu) items react to right mouse button click.
 
 API Changes:
 
@@ -23,6 +26,7 @@ API Changes:
 * [#2748](https://github.com/ckeditor/ckeditor-dev/issues/2748): Enhance errors thrown while creating editor on a nonexistent element or while trying to instantiate second editor on the same element. Thanks to [Byran Zaugg](https://github.com/blzaugg)!
 * [#2698](https://github.com/ckeditor/ckeditor-dev/issues/2698): Added the [`CKEDITOR.htmlParser.element.findOne`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_htmlParser_element.html#method-findOne) method.
 * [#2935](https://github.com/ckeditor/ckeditor-dev/issues/2935): Introduced [`CKEDITOR.config.pasteFromWord_keepZeroMargins`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-pasteFromWord_keepZeroMargins) config option, that allows keeping any `margin-*: 0` style that would be otherwise removed when pasting content with [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin.
+* [#2857](https://github.com/ckeditor/ckeditor-dev/issues/2857): The [`CKEDITOR.tools.fireElementEventHandler`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_tools.html#method-fireElementEventHandler) was added.
 
 Other Changes:
 

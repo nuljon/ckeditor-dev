@@ -1181,7 +1181,6 @@
 		},
 
 		/**
-<<<<<<< HEAD
 		 * Creates a promise from the given function. It works in a similar way as a promise constructor
 		 * (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
 		 * with support for IE8 browser.

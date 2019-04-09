@@ -2018,7 +2018,7 @@
 
 			// Handle special case - fake selection of table cells.
 			if ( editor && editor.plugins.tableselection &&
-				CKEDITOR.plugins.tableselection.isSupportedEnvironment &&
+				editor.plugins.tableselection.isSupportedEnvironment() &&
 				isTableSelection( ranges ) && !isSelectingTable
 			) {
 				performFakeTableSelection.call( this, ranges );

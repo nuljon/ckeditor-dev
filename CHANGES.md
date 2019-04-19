@@ -75,7 +75,7 @@ Fixed Issues:
 
 * [#2571](https://github.com/ckeditor/ckeditor-dev/issues/2571): Fixed: Clicking the categories in the [Emoji](https://ckeditor.com/cke4/addon/emoji) dropdown panel scrolls the entire page.
 
-## CKEditor 4.11
+## CKEditor 4.11.0
 
 **Security Updates:**
 
@@ -168,7 +168,7 @@ API Changes:
 
 * [#2249](https://github.com/ckeditor/ckeditor-dev/issues/1791): Added the [`editor.plugins.detectConflict()`](https://ckeditor.com/docs/ckeditor4/latest/CKEDITOR_editor_plugins.html#method-detectConflict) method finding conflicts between provided plugins.
 
-## CKEditor 4.10
+## CKEditor 4.10.0
 
 New Features:
 
@@ -237,7 +237,7 @@ Fixed Issues:
 
 * [#1835](https://github.com/ckeditor/ckeditor-dev/issues/1835): Fixed: Integration between [CKFinder](https://ckeditor.com/ckeditor-4/ckfinder/) and the [File Browser](https://ckeditor.com/cke4/addon/filebrowser) plugin does not work.
 
-## CKEditor 4.9
+## CKEditor 4.9.0
 
 New Features:
 
@@ -292,7 +292,7 @@ Other Changes:
 * [#1337](https://github.com/ckeditor/ckeditor-dev/issues/1337): Updated the samples layout with the new CKEditor 4 logo and color scheme.
 * [#1591](https://github.com/ckeditor/ckeditor-dev/issues/1591): CKBuilder and language tools are now downloaded over HTTPS. Thanks to [August Detlefsen](https://github.com/augustd)!
 
-## CKEditor 4.8
+## CKEditor 4.8.0
 
 **Important Notes:**
 
@@ -423,7 +423,7 @@ Fixed Issues:
 * [#534](https://github.com/ckeditor/ckeditor-dev/issues/534): [IE] Fixed: [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) does not work in Quirks Mode.
 * [#450](https://github.com/ckeditor/ckeditor-dev/issues/450): Fixed: [`CKEDITOR.filter`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.filter.html) incorrectly transforms the `margin` CSS property.
 
-## CKEditor 4.7
+## CKEditor 4.7.0
 
 **Important Notes:**
 
@@ -522,7 +522,7 @@ Fixed Issues:
 * [#16624](https://dev.ckeditor.com/ticket/16624): Fixed: Improved the [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin which will now normalize the CSS `background` property if it only contains a color value. This fixes missing background colors when using [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword).
 * [#16600](https://dev.ckeditor.com/ticket/16600): [Blink, WebKit] Fixed: Error thrown occasionally by an uninitialized editable for multiple CKEditor instances on the same page.
 
-## CKEditor 4.6
+## CKEditor 4.6.0
 
 New Features:
 
@@ -815,7 +815,7 @@ Fixed Issues:
 
 * [#13486](https://dev.ckeditor.com/ticket/13486): Fixed: The [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin should log an error, not throw an error when upload URL is not set.
 
-## CKEditor 4.5
+## CKEditor 4.5.0
 
 New Features:
 
@@ -867,7 +867,7 @@ Other Changes:
 * [#13279](https://dev.ckeditor.com/ticket/13279): Reviewed CSS vendor prefixes.
 * [#13454](https://dev.ckeditor.com/ticket/13454): Removed unused `lang.image.alertUrl` token from the [Image](https://ckeditor.com/cke4/addon/image) plugin.
 
-## CKEditor 4.5 Beta
+## CKEditor 4.5.0 Beta
 
 New Features:
 
@@ -905,7 +905,7 @@ New Features:
   * Toolbar configurators with live previews were introduced. They will be shipped with every CKEditor package and are meant to help in configuring toolbar layouts.
 
 * [#10925](https://dev.ckeditor.com/ticket/10925): The [Media Embed](https://ckeditor.com/cke4/addon/embed) and [Semantic Media Embed](https://ckeditor.com/cke4/addon/embedsemantic) plugins were introduced. Read more about the new features in the [Embedding Content](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_media_embed.html) article.
-* [#10931](https://dev.ckeditor.com/ticket/10931): Added support for nesting widgets. It is now possible to insert one widget into another widget's nested editable. Note that unless nested editable's [allowed content](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_widget_nestedEditable_definition.html#property-allowedContent) is defined precisely, starting from CKEditor 4.5 some widget buttons may become enabled. This feature is not supported in IE8. Included issues:
+* [#10931](https://dev.ckeditor.com/ticket/10931): Added support for nesting widgets. It is now possible to insert one widget into another widget's nested editable. Note that unless nested editable's [allowed content](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_widget_nestedEditable_definition.html#property-allowedContent) is defined precisely, starting from CKEditor 4.5.0 some widget buttons may become enabled. This feature is not supported in IE8. Included issues:
   * [#12018](https://dev.ckeditor.com/ticket/12018): Fixed and reviewed: Nested widgets garbage collection.
   * [#12024](https://dev.ckeditor.com/ticket/12024): [Firefox] Fixed: Outline is extended to the left by unpositioned drag handlers.
   * [#12006](https://dev.ckeditor.com/ticket/12006): Fixed: Drag and drop of nested block widgets.
@@ -1192,15 +1192,15 @@ Other Changes:
 * [#9504](https://dev.ckeditor.com/ticket/9504): Stopped using deprecated `attribute.specified` in all browsers except Internet Explorer.
 * [#11809](https://dev.ckeditor.com/ticket/11809): Changed tab size in `<pre>` to 4 spaces.
 
-## CKEditor 4.4
+## CKEditor 4.4.0
 
 **Important Notes:**
 
 * Marked the [`editor.beforePaste`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-beforePaste) event as deprecated.
-* The default class of captioned images has changed to `image` (was: `caption`). Please note that once edited in CKEditor 4.4+, all existing images of the `caption` class (`<figure class="caption">`) will be [filtered out](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html) unless the [`config.image2_captionedClass`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-image2_captionedClass) option is set to `caption`. For backward compatibility (i.e. when upgrading), it is highly recommended to use this setting, which also helps prevent CSS conflicts, etc. This does not apply to new CKEditor integrations.
-* Widgets without defined buttons are no longer registered automatically to the [Advanced Content Filter](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html). Before CKEditor 4.4 widgets were registered to the ACF which was an incorrect behavior ([#11567](https://dev.ckeditor.com/ticket/11567)). This change should not have any impact on standard scenarios, but if your button does not execute the widget command, you need to set [`allowedContent`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_feature.html#property-allowedContent) and [`requiredContent`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_feature.html#property-requiredContent) properties for it manually, because the editor will not be able to find them.
+* The default class of captioned images has changed to `image` (was: `caption`). Please note that once edited in CKEditor 4.4.0+, all existing images of the `caption` class (`<figure class="caption">`) will be [filtered out](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html) unless the [`config.image2_captionedClass`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-image2_captionedClass) option is set to `caption`. For backward compatibility (i.e. when upgrading), it is highly recommended to use this setting, which also helps prevent CSS conflicts, etc. This does not apply to new CKEditor integrations.
+* Widgets without defined buttons are no longer registered automatically to the [Advanced Content Filter](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html). Before CKEditor 4.4.0 widgets were registered to the ACF which was an incorrect behavior ([#11567](https://dev.ckeditor.com/ticket/11567)). This change should not have any impact on standard scenarios, but if your button does not execute the widget command, you need to set [`allowedContent`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_feature.html#property-allowedContent) and [`requiredContent`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_feature.html#property-requiredContent) properties for it manually, because the editor will not be able to find them.
 * The [Show Borders](https://ckeditor.com/cke4/addon/showborders) plugin was added to the Standard installation package in order to ensure that unstyled tables are still visible for the user ([#11665](https://dev.ckeditor.com/ticket/11665)).
-* Since CKEditor 4.4 the editor instance should be passed to [`CKEDITOR.style`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.style.html) methods to ensure full compatibility with other features (e.g. applying styles to widgets requires that). We ensured backward compatibility though, so the [`CKEDITOR.style`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.style.html) will work even when the editor instance is not provided.
+* Since CKEditor 4.4.0 the editor instance should be passed to [`CKEDITOR.style`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.style.html) methods to ensure full compatibility with other features (e.g. applying styles to widgets requires that). We ensured backward compatibility though, so the [`CKEDITOR.style`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.style.html) will work even when the editor instance is not provided.
 
 New Features:
 
@@ -1364,7 +1364,7 @@ Fixed Issues:
 * [#11260](https://dev.ckeditor.com/ticket/11260): Fixed: Initially disabled buttons are not read by JAWS as disabled.
 * [#11200](https://dev.ckeditor.com/ticket/11200):  Added [Clipboard](https://ckeditor.com/cke4/addon/clipboard) plugin as a dependency for [Widget](https://ckeditor.com/cke4/addon/widget) to fix drag and drop.
 
-## CKEditor 4.3
+## CKEditor 4.3.0
 
 New Features:
 
@@ -1421,14 +1421,14 @@ Fixed Issues:
 * [#11123](https://dev.ckeditor.com/ticket/11123): [Firefox] Widget is destroyed after being dragged outside of `<body>`.
 * [#11124](https://dev.ckeditor.com/ticket/11124): Fixed the [Elements Path](https://ckeditor.com/cke4/addon/elementspath) in an editor using the [Div Editing Area](https://ckeditor.com/cke4/addon/divarea).
 
-## CKEditor 4.3 Beta
+## CKEditor 4.3.0 Beta
 
 New Features:
 
 * [#9764](https://dev.ckeditor.com/ticket/9764): Widget System.
   * [Widget plugin](https://ckeditor.com/cke4/addon/widget) introducing the [Widget API](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.plugins.widget.html).
   * New [`editor.enterMode`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-enterMode) and [`editor.shiftEnterMode`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-shiftEnterMode) properties &ndash; normalized versions of [`config.enterMode`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-enterMode) and [`config.shiftEnterMode`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-shiftEnterMode).
-  * Dynamic editor settings. Starting from CKEditor 4.3 Beta, *Enter* mode values and [content filter](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html) instances may be changed dynamically (for example when the caret was placed in an element in which editor features should be adjusted). When you are implementing a new editor feature, you should base its behavior on [dynamic](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-activeEnterMode) or [static](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-enterMode) *Enter* mode values depending on whether this feature works in selection context or globally on editor content.
+  * Dynamic editor settings. Starting from CKEditor 4.3.0 Beta, *Enter* mode values and [content filter](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html) instances may be changed dynamically (for example when the caret was placed in an element in which editor features should be adjusted). When you are implementing a new editor feature, you should base its behavior on [dynamic](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-activeEnterMode) or [static](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-enterMode) *Enter* mode values depending on whether this feature works in selection context or globally on editor content.
       * Dynamic *Enter* mode values &ndash; [`editor.setActiveEnterMode()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-setActiveEnterMode) method, [`editor.activeEnterModeChange`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-activeEnterModeChange) event, and two properties: [`editor.activeEnterMode`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-activeEnterMode) and [`editor.activeShiftEnterMode`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-activeShiftEnterMode).
       * Dynamic content filter instances &ndash; [`editor.setActiveFilter()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-setActiveFilter) method, [`editor.activeFilterChange`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-activeFilterChange) event, and [`editor.activeFilter`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-activeFilter) property.
   * "Fake" selection was introduced. It makes it possible to virtually select any element when the real selection remains hidden. See the  [`selection.fake()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dom_selection.html#method-fake) method.
@@ -1492,7 +1492,7 @@ Fixed Issues:
 * [#10731](https://dev.ckeditor.com/ticket/10731): [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin breaks cloning of editor configuration.
 * It is now possible to set per instance [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin configuration instead of setting the configuration globally.
 
-## CKEditor 4.2
+## CKEditor 4.2.0
 
 **Important Notes:**
 
@@ -1576,7 +1576,7 @@ Fixed Issues:
 * [#10131](https://dev.ckeditor.com/ticket/10131): Fixed: [`undoManager.update()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_undo_UndoManager.html#method-update) does not refresh the command state.
 * [#10337](https://dev.ckeditor.com/ticket/10337): Fixed: Unable to remove `<s>` using [Remove Format](https://ckeditor.com/cke4/addon/removeformat).
 
-## CKEditor 4.1
+## CKEditor 4.1.0
 
 Fixed Issues:
 
@@ -1588,7 +1588,7 @@ Fixed Issues:
   * [#10195](https://dev.ckeditor.com/ticket/10195): [Image](https://ckeditor.com/cke4/addon/image) plugin no longer registers rules for links to Advanced Content Filter.
   * [#10213](https://dev.ckeditor.com/ticket/10213): [Justify](https://ckeditor.com/cke4/addon/justify) plugin is now correctly registering rules to Advanced Content Filter when [`config.justifyClasses`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-justifyClasses) is defined.
 
-## CKEditor 4.1 RC
+## CKEditor 4.1.0 RC
 
 New Features:
 
@@ -1694,7 +1694,7 @@ Fixed Issues:
 * [#9693](https://dev.ckeditor.com/ticket/9693): Removed "Live Preview" checkbox from UI color picker.
 
 
-## CKEditor 4.0
+## CKEditor 4.0.0
 
 The first stable release of the new CKEditor 4 code line.
 

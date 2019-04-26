@@ -3637,6 +3637,8 @@
 		CKEDITOR.tools.array.forEach( fakeParagraphs, function( fakeParagraph ) {
 			fakeParagraph.remove();
 		} );
+
+		fakeParagraphs.length = 0;
 	}
 
 	function setupEditables( widget ) {

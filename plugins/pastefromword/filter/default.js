@@ -1163,7 +1163,7 @@
 				var margin = styles[ 'margin-left' ],
 					level = element.attributes[ 'cke-list-level' ];
 
-				margin = CKEDITOR.tools.convertToPx( margin ) - 40 * level;
+				margin = Math.max( CKEDITOR.tools.convertToPx( margin ) - 40 * level, 0 );
 
 				if ( margin ) {
 					styles[ 'margin-left' ] = margin + 'px';
@@ -1580,7 +1580,7 @@
 					};
 				}
 
-				marginLeft = parseInt( styles[ 'margin-left' ], 10 ) - leftOffset;
+				marginLeft = Math.max( parseInt( styles[ 'margin-left' ], 10 ) - leftOffset, 0 );
 
 				if ( marginLeft ) {
 					styles[ 'margin-left' ] = marginLeft + 'px';

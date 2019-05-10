@@ -229,6 +229,8 @@
 			selection = editor && editor.getSelection(),
 			ranges = selection && selection.getRanges() || [],
 			enclosedNode = ranges && ranges[ 0 ].getEnclosedNode(),
+			isEnclosedNodeAnElement = enclosedNode && enclosedNode.type == CKEDITOR.NODE_ELEMENT,
+			isEnclosedNodeAnImage = isEnclosedNodeAnElement && enclosedNode.is( 'img' ),
 			cells,
 			table,
 			i;
@@ -245,9 +247,7 @@
 		}
 
 		// Also don't perform fake selection when image is selected (#2235).
-		if ( enclosedNode &&
-			enclosedNode.type == CKEDITOR.NODE_ELEMENT &&
-			enclosedNode.is( 'img' ) ) {
+		if ( enclosedNode && isEnclosedNodeAnElement && isEnclosedNodeAnImage ) {
 			return false;
 		}
 

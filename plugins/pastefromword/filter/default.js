@@ -1587,7 +1587,7 @@
 				var parents = [],
 					parent = element.parent;
 
-				while( parent ) {
+				while ( parent ) {
 					if ( parent.name === 'li' ) {
 						parents.push( parent );
 					}

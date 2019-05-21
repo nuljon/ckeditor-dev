@@ -2113,6 +2113,14 @@ CKEDITOR.dom.element.clearMarkers = function( database, element, removeFromDatab
 				else if ( !type || node.type == type )
 					callback( node );
 			}
+		},
+
+		isDetached: function() {
+			if ( !this.getDocument().getDocumentElement().contains( this ) ) {
+				return true;
+			} else {
+				return false;
+			}
 		}
 	} );
 

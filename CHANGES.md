@@ -13,6 +13,8 @@ Fixed Issues:
 * [#2672](https://github.com/ckeditor/ckeditor-dev/issues/2672): Fixed: When resizing [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to minimum size with a resizer the image dialog doesn't show actual values.
 * [#1478](https://github.com/ckeditor/ckeditor-dev/issues/1478): Fixed: Custom colors added to [Color Button](https://ckeditor.com/cke4/addon/colorbutton) via [`config.colorButton_colors`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-colorButton_colors) in form label/code don't work correctly.
 * [#1469](https://github.com/ckeditor/ckeditor-dev/issues/1469): Fixed: Trying to get data from nested editable inside freshly pasted widget throws an error.
+* [#2235](https://github.com/ckeditor/ckeditor-dev/issues/2235): Fixed: [Image](https://ckeditor.com/cke4/addon/image) in table cell has an empty URL field when edited from context menu opened by right-click when [Table Selection](https://ckeditor.com/cke4/addon/tableselection) plugin is in use.
+
 
 API Changes:
 
@@ -29,10 +31,6 @@ API Changes:
 Other Changes:
 
 * [#2741](https://github.com/ckeditor/ckeditor-dev/issues/2721): Replaced deprecated `arguments.callee` calls with named function expressions.
-
-Fixed Issues:
-
-* [#2235](https://github.com/ckeditor/ckeditor-dev/issues/2235): Fixed: [Image](https://ckeditor.com/cke4/addon/image) in table cell has an empty URL field when edited from context menu opened by right-click when [Table Selection](https://ckeditor.com/cke4/addon/tableselection) plugin is in use.
 
 ## CKEditor 4.11.4
 

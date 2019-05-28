@@ -649,6 +649,7 @@
 				}
 			}
 
+			var keepZeroMargins = editor && editor.config.pasteFromWord_keepZeroMargins;
 			// Still some elements might have shorthand margins or longhand with zero values.
 			parseShorthandMargins( styles );
 			normalizeMargins();
@@ -659,10 +660,16 @@
 				var keys = [ 'top', 'right', 'bottom', 'left' ];
 				CKEDITOR.tools.array.forEach( keys, function( key ) {
 					key = 'margin-' + key;
-					if ( !parseFloat( styles[ key ] ) ) {
-						delete styles[ key ];
+					if ( !( key in styles ) ) {
+						return;
+					}
+
+					var value = CKEDITOR.tools.convertToPx( styles[ key ] );
+					// We need to get rid of margins, unless they are allowed in config (#2935).
+					if ( value || keepZeroMargins ) {
+						styles[ key ] = value ? value + 'px' : 0;
 					} else {
-						styles[ key ] = CKEDITOR.tools.convertToPx( styles[ key ] ) + 'px';
+						delete styles[ key ];
 					}
 				} );
 			}
@@ -2453,11 +2460,7 @@
 		if ( marginCase ) {
 			margin = CKEDITOR.tools.style.parse.margin( style[ marginCase ] );
 			for ( key in margin ) {
-				var currMargin = margin[ key ];
-				// skip zeros.
-				if ( parseFloat( currMargin ) ) {
-					style[ 'margin-' + key ] = currMargin;
-				}
+				style[ 'margin-' + key ] = margin[ key ];
 			}
 			delete style[ marginCase ];
 		}

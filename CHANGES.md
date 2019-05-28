@@ -13,6 +13,7 @@ Fixed Issues:
 
 * [#2672](https://github.com/ckeditor/ckeditor-dev/issues/2672): Fixed: When resizing [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to minimum size with a resizer the image dialog doesn't show actual values.
 * [#1478](https://github.com/ckeditor/ckeditor-dev/issues/1478): Fixed: Custom colors added to [Color Button](https://ckeditor.com/cke4/addon/colorbutton) via [`config.colorButton_colors`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-colorButton_colors) in form label/code don't work correctly.
+* [#1469](https://github.com/ckeditor/ckeditor-dev/issues/1469): Fixed: Trying to get data from nested editable inside freshly pasted widget throws an error.
 
 API Changes:
 
@@ -23,8 +24,40 @@ API Changes:
 * [#2598](https://github.com/ckeditor/ckeditor-dev/issues/2598): Added [`CKEDITOR.plugins.pagebreak.createElement`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_pagebreak.html#method-createElement) method allowing to create [Page Break](https://ckeditor.com/cke4/addon/pagebreak) plugin [`CKEDITOR.dom.element`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dom_element.html) instance.
 * [#2748](https://github.com/ckeditor/ckeditor-dev/issues/2748): Enhance errors thrown while creating editor on a nonexistent element or while trying to instantiate second editor on the same element. Thanks to [Byran Zaugg](https://github.com/blzaugg)!
 * [#2698](https://github.com/ckeditor/ckeditor-dev/issues/2698): Added the [`CKEDITOR.htmlParser.element.findOne`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_htmlParser_element.html#method-findOne) method.
+* [#2935](https://github.com/ckeditor/ckeditor-dev/issues/2935): Introduced [`CKEDITOR.config.pasteFromWord_keepZeroMargins`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-pasteFromWord_keepZeroMargins) config option, that allows keeping any `margin-*: 0` style that would be otherwise removed when pasting content with [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin.
+* [#2962](https://github.com/ckeditor/ckeditor-dev/issues/2962): Added the [`CKEDITOR.tools.promise`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_tools_promise.html) class.
+
+Other Changes:
+
+* [#2741](https://github.com/ckeditor/ckeditor-dev/issues/2721): Replaced deprecated `arguments.callee` calls with named function expressions.
 
 ## CKEditor 4.11.4
+
+Fixed Issues:
+
+* [#589](https://github.com/ckeditor/ckeditor-dev/issues/589): Fixed: The editor causes memory leaks in create and destroy cycles.
+* [#1397](https://github.com/ckeditor/ckeditor-dev/issues/1397): Fixed: Using the dialog to remove headers from a [table](https://ckeditor.com/cke4/addon/table) with one header row only throws an error.
+* [#1479](https://github.com/ckeditor/ckeditor-dev/issues/1479): Fixed: [Justification](https://ckeditor.com/cke4/addon/justify) for styled content in BR mode is disabled.
+* [#2816](https://github.com/ckeditor/ckeditor-dev/issues/2816): Fixed: [Enhanced Image](https://ckeditor.com/cke4/addon/image2) resize handler is visible in [read-only mode](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_readonly.html).
+* [#2874](https://github.com/ckeditor/ckeditor-dev/issues/2874): Fixed: [Enhanced Image](https://ckeditor.com/cke4/addon/image2) resize handler is not created when the editor is initialized in [read-only mode](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_readonly.html).
+* [#2775](https://github.com/ckeditor/ckeditor-dev/issues/2775): Fixed: [Clipboard](https://ckeditor.com/cke4/addon/clipboard) paste buttons have wrong state when [read-only](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_readonly.html) mode is set by the mouse event listener with the [Div Editing Area](https://ckeditor.com/cke4/addon/divarea) plugin.
+* [#1901](https://github.com/ckeditor/ckeditor-dev/issues/1901): Fixed: Cannot open the context menu over a [Widget](https://ckeditor.com/cke4/addon/widget) with the <kbd>Shift</kbd>+<kbd>F10</kbd> keyboard shortcut.
+
+Other Changes:
+
+* Updated [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) (WSC) and [SpellCheckAsYouType](https://ckeditor.com/cke4/addon/scayt) (SCAYT) plugins:
+	* Language dictionary update: German language was extended with over 600k new words.
+	* Language dictionary update: Swedish language was extended with over 300k new words.
+	* Grammar support added for Australian and New Zealand English, Polish, Slovak, Slovenian and Austrian languages.
+	* Changed wavy red and green lines that underline spelling and grammar errors to straight ones.
+	* [#55](https://github.com/WebSpellChecker/ckeditor-plugin-wsc/issues/55): Fixed: WSC does not use [`CKEDITOR.getUrl()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-getUrl) when referencing style sheets.
+	* [#166](https://github.com/WebSpellChecker/ckeditor-plugin-scayt/issues/166): Fixed: SCAYT does not use [`CKEDITOR.getUrl()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-getUrl) when referencing style sheets.
+	* [#56](https://github.com/WebSpellChecker/ckeditor-plugin-wsc/issues/56): [Chrome] Fixed: SCAYT/WSC throws errors when running inside a  Chrome extension.
+	* Fixed: After removing a dictionary, the words are not underlined and considered as incorrect.
+	* Fixed: The Slovenian (`sl_SL`) language does not work.
+	* Fixed: Quotes with code `U+2019` (Right single quotation mark) are considered separators.
+	* Fixed: Wrong error message formatting when the service ID is invalid.
+	* Fixed: Absent languages in the Languages tab when using SCAYT with the [Shared Spaces](https://ckeditor.com/cke4/addon/sharedspace) plugin.
 
 ## CKEditor 4.11.3
 
@@ -266,6 +299,7 @@ Fixed Issues:
 * [#1516](https://github.com/ckeditor/ckeditor-dev/issues/1516): Fixed: Fake selection allows removing content in read-only mode using the <kbd>Backspace</kbd> and <kbd>Delete</kbd> keys.
 * [#1570](https://github.com/ckeditor/ckeditor-dev/issues/1570): Fixed: Fake selection allows cutting content in read-only mode using the <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>X</kbd> keys.
 * [#1363](https://github.com/ckeditor/ckeditor-dev/issues/1363): Fixed: Paste notification is unclear and it might confuse users.
+
 
 API Changes:
 

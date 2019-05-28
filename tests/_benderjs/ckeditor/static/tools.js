@@ -1204,6 +1204,42 @@
 			} else {
 				element[ eventName ]( evt );
 			}
+		},
+
+		/**
+		 * Creates test suite object for `bender.test` method from synchronous and asynchronous test cases.
+		 * Asynchronous test must be a function which returns a promise and cannot poses wait-resume statements.
+		 *
+		 * Please notice that currently this method doesn't support special test methods (`setUp`, `tearDown`, etc.),
+		 * which might be passed to the `bender.test` function.
+		 *
+		 * @param {Object} tests object
+		 */
+		createAsyncTests: function( tests ) {
+			var tmp = {};
+
+			for ( var testName in tests ) {
+				tmp[ testName ] = ( function( test ) {
+					return function() {
+						var promise = test.apply( this );
+
+						if ( promise ) {
+							promise.then( function() {
+									resume();
+								} )
+								[ 'catch' ]( function( err ) {
+									resume( function() {
+										throw err;
+									} );
+								} );
+
+							wait();
+						}
+					};
+				} )( tests[ testName ] );
+			}
+
+			return tmp;
 		}
 
 	};
